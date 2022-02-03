@@ -1,3 +1,6 @@
+const button = document.getElementById('button');
+const audioElement = document.getElementById('audio');
+
 // VoiceRSS Javascript SDK
 const VoiceRSS = {
   speech: function (e) {
@@ -101,3 +104,18 @@ const VoiceRSS = {
     throw 'The browser does not support HTTP request';
   },
 };
+
+// VoiceRSS Speech Function
+function tellMe(joke) {
+  const jokeString = joke.trim().replace(/ /g, '%20');
+  // VoiceRSS Speech Parameters
+  VoiceRSS.speech({
+    key: '943f75fef7384f498b7a4453f26f6754',
+    src: jokeString,
+    hl: 'en-us',
+    r: 0,
+    c: 'mp3',
+    f: '44khz_16bit_stereo',
+    ssml: false,
+  });
+}
