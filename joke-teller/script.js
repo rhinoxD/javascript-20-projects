@@ -133,6 +133,8 @@ async function getJokes() {
     } else {
       joke = data.joke;
     }
+    // Passing Joke to VoiceRSS API
+    tellMe(joke);
   } catch (error) {
     // Catch Error Here
   }
