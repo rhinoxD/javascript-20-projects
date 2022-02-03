@@ -105,6 +105,11 @@ const VoiceRSS = {
   },
 };
 
+// Disable/Enable Button
+function toggleButton() {
+  button.disabled = !button.disabled;
+}
+
 // VoiceRSS Speech Function
 function tellMe(joke) {
   const jokeString = joke.trim().replace(/ /g, '%20');
@@ -135,7 +140,13 @@ async function getJokes() {
     }
     // Passing Joke to VoiceRSS API
     tellMe(joke);
+    // Disable Button
+    toggleButton();
   } catch (error) {
     // Catch Error Here
   }
 }
+
+// Event Listeners
+button.addEventListener('click', getJokes);
+audioElement.addEventListener('ended', toggleButton);
