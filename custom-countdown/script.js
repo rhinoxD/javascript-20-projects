@@ -13,7 +13,7 @@ const completeBtn = document.getElementById('complete-button');
 
 let countdownTitle = '';
 let countdownDate = '';
-let countdownValue = Date;
+let countdownValue = new Date();
 let countdownActive;
 let savedCountdown;
 
@@ -92,7 +92,7 @@ function reset() {
 function restorePreviousCountdown() {
   // Get countdown from localStorage if available
   if (localStorage.getItem('countdown')) {
-    inputContainer.hidden = true; 
+    inputContainer.hidden = true;
     savedCountdown = JSON.parse(localStorage.getItem('countdown'));
     countdownTitle = savedCountdown.title;
     countdownDate = savedCountdown.date;
