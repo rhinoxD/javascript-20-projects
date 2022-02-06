@@ -14,12 +14,27 @@
         <!-- Full Name -->
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="Full Name" />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Full Name"
+            required
+            minlength="3"
+            maxlength="100"
+          />
         </div>
         <!-- Phone Number -->
         <div class="form-group">
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="555-555-5555"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
         </div>
         <!-- Email Address -->
         <div class="form-group">
@@ -29,6 +44,7 @@
             id="email"
             name="email"
             placeholder="email@address.com"
+            required
           />
         </div>
         <!-- Website URL -->
@@ -39,6 +55,7 @@
             id="website"
             name="website"
             placeholder="http://jacinto.design"
+            required
           />
         </div>
         <!-- Password -->
@@ -48,6 +65,9 @@
             type="password"
             id="password1"
             placeholder="Create Password (Min. 8 characters)"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
           />
         </div>
         <!-- Confirm Password -->
@@ -57,6 +77,8 @@
             type="password"
             id="password2"
             placeholder="Confirm Password"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
             name="password"
           />
         </div>
