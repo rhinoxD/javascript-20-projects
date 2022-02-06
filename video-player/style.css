@@ -28,7 +28,7 @@ body {
   min-width: 800px;
   border: 5px solid black;
   border-radius: 10px;
-  background: black;
+  background-color: black;
   position: relative;
   cursor: pointer;
 }
@@ -61,7 +61,7 @@ video {
   display: flex;
   justify-content: space-between;
   opacity: 0;
-  transition: all 0.5s ease-out 1s;
+  transition: all 0.5s ease-out 2s;
 }
 
 .show-controls:hover .controls-container {
@@ -226,6 +226,7 @@ select > option {
     min-width: 0;
     max-width: 95vw;
   }
+
   .fas {
     font-size: 20px;
   }
