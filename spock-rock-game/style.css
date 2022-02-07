@@ -48,7 +48,6 @@ h2 {
 .far {
   font-size: 50px;
   margin-right: 40px;
-  user-select: none;
 }
 
 #player .far,
