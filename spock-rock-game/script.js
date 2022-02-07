@@ -31,14 +31,11 @@ function resetSelected() {
   allGameIcons.forEach((icon) => {
     icon.classList.remove('selected');
   });
-  stopConfetti();
-  removeConfetti();
 }
 
 // Passing player selection value and styling icons
 function select(playerChoice) {
   resetSelected();
-  checkResult(playerChoice);
   // Add 'selected' styling & playerChoice
   switch (playerChoice) {
     case 'rock':
